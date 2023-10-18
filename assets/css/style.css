@@ -1,0 +1,106 @@
+* {
+  font-family: "El Messiri", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #FFF9F4;
+}
+
+header {
+  background-color: #272727;
+  padding: 0.8rem 4rem;
+}
+header .nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .nav-top .start {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+header .nav-top .start a {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+}
+header .nav-top .center a img {
+  height: 120px;
+  width: 120px;
+}
+header .nav-top .end {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+header .nav-top .end button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+header .nav-bot {
+  margin-top: 0.8rem;
+}
+header .nav-bot .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .nav-bot .item a {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#banner {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner-item {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.banner-input {
+  display: none;
+}
+
+.banner-input-label {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  user-select: none;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
