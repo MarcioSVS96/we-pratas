@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo-light.png" type="image/x-icon">
     <!--Script-->
     <script src="assets/js/carousel.js" defer></script>
-
+    <script src="assets/js/gallery.js" defer></script>
+    <script src="script.js" defer></script>
     <title>We Pratas</title>
 </head>
 <body>
@@ -26,9 +27,9 @@
                 <a href="#"><img src="assets/img/logo-light.png" alt="logo";></a>
             </div>
             <div class="end">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button><i class="fa-solid fa-user"></i></button>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
+                <button><i class="fas fa-magnifying-glass"></i></button>
+                <button><i class="fas fa-user"></i></button>
+                <button><i class="fas fa-cart-shopping"></i></button>
             </div>
         </div>
         <div class="nav-bot">
@@ -47,7 +48,7 @@
     <main>
 
         <!--Banners-->
-        <div class="container mt-4">
+        <div class="container">
             
             <div id="banner">
               <div class="banner-container">
@@ -60,15 +61,47 @@
               <input type="radio" class="banner-input" name="banner-radio" id="radio2">
               <label for="radio2" class="banner-input-label" id="nextBtn">&#10095;</label>
             </div>
-          </div>
+        </div>
         
         <!--Categories-->
-        <!--Info-->
-        <!--Featured products-->
-        <section id="section-galeria" class="section">
-            <h2>Galeria</h2>
-            <div id="gallery"></div>
+        <section id="categories">
+            <div class="categories-silver">
+                <div class="categorie"><a href="#"><img src="assets/img/categoria1.jpg" alt="aneis"></a></div>
+                <div class="categorie"><a href="#"><img src="assets/img/categoria2.jpg" alt="brincos"></a></div>
+                <div class="categorie"><a href="#"><img src="assets/img/categoria3.jpg" alt="colares"></a></div>
+                <div class="categorie"><a href="#"><img src="assets/img/categoria4.jpg" alt="pulseiras"></a></div>
+            </div>
         </section>
+
+        <!--Informacion-->
+        <section class="info">
+            <div class="info-web">
+                <img src="assets/img/card.png" alt="card">
+                <div class="info-web-card">
+                    <h3>Até 6x sem juros</h3>
+                    <p>no cartão de crédito</p>
+                </div>
+            </div>
+            <div class="info-web">
+                <img src="assets/img/truck.png" alt="truck">
+                <div class="info-web-card">
+                    <h3>Frete grátis Brasil</h3>
+                    <p>compras acima de R$ 199</p>
+                </div>
+            </div>
+            <div class="info-web">
+                <img src="assets/img/seg.png" alt="seg">
+                <div class="info-web-card">
+                    <h3>Compra 100% segura</h3>
+                    <p>seus dados protegidos</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Featured products-->
+        <section class="catalogo" id="catalogo-container">
+               
+            </section>
         <!--Content items-->
         <!--About-->
     </main>
