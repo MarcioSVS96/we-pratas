@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="As inscri&amp;ccedil;&amp;otilde;es para o quadro da TV Jornal j&amp;aacute; est&amp;atilde;o abertas">
     <!--STYLE-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/8b03de352a.js" crossorigin="anonymous" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
@@ -20,16 +20,13 @@
     <header class="header" id="header">
         <div class="nav-top">
             <div class="start">
-                <a href="#">Contato</a>
-                <a href="#">Blog</a>
+                <a href="http://127.0.0.1:5500/formulario.html">Contato</a>
             </div>
             <div class="center">
-                <a href="#"><img src="assets/img/logo-light.png" alt="logo";></a>
+                <a href="#" aria-label="para o topo da página"><img src="assets/img/logo-light.png" alt="logo";></a>
             </div>
             <div class="end">
-                <button><i class="fas fa-magnifying-glass"></i></button>
-                <button><i class="fas fa-user"></i></button>
-                <button><i class="fas fa-cart-shopping"></i></button>
+                <button><ion-icon name="cart-outline"  class="icon"></ion-icon></button>
             </div>
         </div>
         <div class="nav-bot">
@@ -66,12 +63,20 @@
         <!--Categories-->
         <section id="categories">
             <div class="categories-silver">
-                <div class="categorie"><a href="#"><img src="assets/img/categoria1.jpg" alt="aneis"></a></div>
-                <div class="categorie"><a href="#"><img src="assets/img/categoria2.jpg" alt="brincos"></a></div>
-                <div class="categorie"><a href="#"><img src="assets/img/categoria3.jpg" alt="colares"></a></div>
-                <div class="categorie"><a href="#"><img src="assets/img/categoria4.jpg" alt="pulseiras"></a></div>
+                <div class="categorie">
+                    <a href="#"><img src="assets/img/categoria1.jpg" alt="aneis"><span class="category-name">Aneis</span></a>
+                </div>
+                <div class="categorie">
+                    <a href="#"><img src="assets/img/categoria2.jpg" alt="brincos"><span class="category-name">Brincos</span></a>
+                </div>
+                <div class="categorie">
+                    <a href="#"><img src="assets/img/categoria3.jpg" alt="colares"><span class="category-name">Colares</span></a>
+                </div>
+                <div class="categorie">
+                    <a href="#"><img src="assets/img/categoria4.jpg" alt="pulseiras"><span class="category-name">Pulseiras</span></a>
+                </div>
             </div>
-        </section>
+        </section>   
 
         <!--Informacion-->
         <section class="info">
@@ -99,17 +104,47 @@
         </section>
 
         <!--Featured products-->
-        <section class="catalogo" id="catalogo-container">
-               
-            </section>
-        <!--Content items-->
+        <section id="featured-product">
+            <h2 class="title">CATALOGO</h2>
+            <div class="catalogo" id="catalogo-container"></div>
+        </section>
+
         <!--About-->
+        <section class="about" id="about">
+            <div class="left">
+                <img src="assets/img/about.jpg" alt="background" class="background-img">
+                <img src="assets/img/Imagem do WhatsApp de 2023-10-16 à(s) 14.23.21_6cd03b30.jpg" alt="logo" class="logo-img">
+                
+            </div>
+            <div class="right">
+                <h2>We Pratas</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis rem vel adipisci error placeat dicta, nemo voluptatem, sint consequuntur delectus architecto esse maiores pariatur nesciunt sapiente dolor? Omnis.</p>
+            </div>
+        </section>
+
+        <div class="icon-whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=5581984572161" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Sua Loja de Pratas. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <a href="#"><ion-icon name="logo-facebook" class="icon"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram" class="icon"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-whatsapp" class="icon"></ion-icon></a>
+        </div>
+        <div class="direitos">
+            <img src="assets/img/logo-light.png" alt="">
+            <p>&copy; 2023 We Pratas. Todos os direitos reservados.</p>
+        </div>
+        <div class="topo">
+            <a href="#home"><ion-icon name="arrow-up" class="icon"></ion-icon></a>
+        </div>
     </footer>
 
-   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

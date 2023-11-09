@@ -1,0 +1,43 @@
+.about{
+    display: flex;
+    padding: 6rem;
+ 
+    .left{
+        width: 50%;
+        height: auto;
+        position: relative;
+
+        .background-img{
+            width: 450px;
+            height: auto;
+        }
+        .logo-img{
+            position: absolute;
+            top: 80px;
+            left: 300px;
+            width: 300px;
+            height: auto;
+        }
+    }
+   .right{
+        margin-left: 9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #c9bdaf;
+        height: 300px;
+        margin-top: 5rem;
+        text-align: center;
+
+        h2{
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        p{
+            line-height: 1.3;
+            padding: 30px;
+        }
+   }
+}
+

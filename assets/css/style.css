@@ -126,6 +126,7 @@ header .nav-bot .item a {
   width: calc(24% - 10px); /* Considerando uma margem de 10px à direita e 10px à esquerda */
   cursor: pointer;
   margin: 10px; /* Espaçamento entre as categorias */
+  text-align: center;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -137,6 +138,23 @@ header .nav-bot .item a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.category-name {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: black;
+}
+
+.categorie a:hover .category-name {
+  display: block;
+  border: none;
 }
 
 .info {
@@ -208,6 +226,12 @@ body {
   color: #27ae60;
 }
 
+#featured-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .catalogo {
   display: flex;
   flex-wrap: wrap;
@@ -257,6 +281,105 @@ body {
 
 .card button:hover {
   background-color: #3a3a3a;
+}
+
+.title {
+  border-bottom: 2px solid #333; /* Borda inferior de 2px de espessura na cor #333 */
+  padding-bottom: 5px; /* Espaçamento na parte inferior para a borda */
+  width: 300px; /* Largura do título */
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.about {
+  display: flex;
+  padding: 6rem;
+}
+.about .left {
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+.about .left .background-img {
+  width: 450px;
+  height: auto;
+}
+.about .left .logo-img {
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  width: 300px;
+  height: auto;
+}
+.about .right {
+  margin-left: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9bdaf;
+  height: 300px;
+  margin-top: 5rem;
+  text-align: center;
+}
+.about .right h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.about .right p {
+  line-height: 1.3;
+  padding: 30px;
+}
+
+footer {
+  background-color: #272727;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  align-items: center;
+}
+footer .redes-sociais {
+  font-size: 40px;
+  color: #ffffff;
+}
+footer .direitos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .direitos img {
+  width: 100px;
+}
+footer .direitos p {
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+/* Estilize o ícone do WhatsApp conforme necessário */
+.icon-whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.5137254902);
+  z-index: 100;
+}
+.icon-whatsapp a {
+  font-size: 30px;
+  color: #FFF;
+  height: 30px;
+  width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
