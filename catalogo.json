@@ -12,7 +12,7 @@
     {
         "nome": "Produto 3",
         "imagem": "/assets/img/produto3.jpg",
-        "preco": "40,00"
+        "preco": "R$40,00"
     },
     {
         "nome": "Produto 4",
@@ -32,7 +32,7 @@
     {
         "nome": "Produto 7",
         "imagem": "/assets/img/produto7.jpg",
-        "preco": "90,00"
+        "preco": "R$90,00"
     },
     {
         "nome": "Produto 8",

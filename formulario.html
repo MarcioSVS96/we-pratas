@@ -15,14 +15,27 @@
     <header class="header" id="header">
         <div class="nav-top">
             <div class="start">
-                <a href="#">Contato</a>
+                <a href="http://127.0.0.1:5500/formulario.html">Contato</a>
             </div>
             <div class="center">
-                <a href="#" aria-label="para o topo da página"><img src="assets/img/logo-light.png" alt="logo";></a>
+                <a href="index.html" aria-label="para o topo da página"><img src="assets/img/logo-light.png" alt="logo";></a>
             </div>
             <div class="end">
-                <button><ion-icon name="cart-outline"  class="icon"></ion-icon></button>
+                <button id="cart-btn">
+                    <ion-icon name="cart-outline" class="icon" id="cart"></ion-icon>
+                </button>
+                <span id="cartCounter" class="cart-counter"></span>
+                <div class="cart-overlay" id="cartOverlay">
+                    <div class="cart-content">
+                        <h2>Seu carrinho</h2>
+                        <ul id="cartItems"></ul>
+                        <div class="cart-buttons">
+                            <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
         <div class="nav-bot">
             <nav class="item">

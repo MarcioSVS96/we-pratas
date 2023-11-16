@@ -12,7 +12,8 @@
     <link rel="shortcut icon" href="assets/img/logo-light.png" type="image/x-icon">
     <!--Script-->
     <script src="assets/js/carousel.js" defer></script>
-    <script src="assets/js/gallery.js" defer></script>
+    <script src="assets/js/cart.js" defer></script>
+    <script src="assets/js/scroll-header.js" defer></script>
     <script src="script.js" defer></script>
     <title>We Pratas</title>
 </head>
@@ -23,11 +24,24 @@
                 <a href="http://127.0.0.1:5500/formulario.html">Contato</a>
             </div>
             <div class="center">
-                <a href="#" aria-label="para o topo da página"><img src="assets/img/logo-light.png" alt="logo";></a>
+                <a href="index.html" aria-label="para o topo da página"><img src="assets/img/logo-light.png" alt="logo";></a>
             </div>
             <div class="end">
-                <button><ion-icon name="cart-outline"  class="icon"></ion-icon></button>
+                <button id="cart-btn">
+                    <ion-icon name="cart-outline" class="icon" id="cart"></ion-icon>
+                </button>
+                <span id="cartCounter" class="cart-counter"></span>
+                <div class="cart-overlay" id="cartOverlay">
+                    <div class="cart-content">
+                        <h2>Seu carrinho</h2>
+                        <ul id="cartItems"></ul>
+                        <div class="cart-buttons">
+                            <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
         <div class="nav-bot">
             <nav class="item">
@@ -62,6 +76,7 @@
         
         <!--Categories-->
         <section id="categories">
+            
             <div class="categories-silver">
                 <div class="categorie">
                     <a href="#"><img src="assets/img/categoria1.jpg" alt="aneis"><span class="category-name">Aneis</span></a>
@@ -140,7 +155,7 @@
             <p>&copy; 2023 We Pratas. Todos os direitos reservados.</p>
         </div>
         <div class="topo">
-            <a href="#home"><ion-icon name="arrow-up" class="icon"></ion-icon></a>
+            <a href="#banner"><ion-icon name="arrow-up" class="icon"></ion-icon></a>
         </div>
     </footer>
 

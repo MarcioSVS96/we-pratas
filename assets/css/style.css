@@ -15,6 +15,14 @@ body {
 header {
   background-color: #272727;
   padding: 0.8rem 4rem;
+  /*
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  */
 }
 header .nav-top {
   display: flex;
@@ -39,14 +47,14 @@ header .nav-top .center a img {
 }
 header .nav-top .end {
   display: flex;
-  justify-content: space-between;
   width: 100px;
 }
-header .nav-top .end button {
+header .nav-top .end #cart-btn {
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
   color: #ffffff;
+  cursor: pointer;
 }
 header .nav-bot {
   margin-top: 0.8rem;
@@ -61,6 +69,56 @@ header .nav-bot .item a {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.45s ease;
+  height: 6rem;
+}
+.fixed-header img {
+  max-width: 70px;
+  max-height: 70px;
+  transition: all 0.45s ease;
+}
+
+.hide-nav {
+  display: none;
+  transition: all 0.55s ease;
+}
+
+/* ... Seus estilos CSS existentes ... */
+.cart-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.cart-content h2 {
+  font-size: 30px;
+}
+
+#cartItems {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-buttons {
+  margin-top: 10px;
 }
 
 #banner {
@@ -380,6 +438,90 @@ footer .direitos p {
   color: #FFF;
   height: 30px;
   width: 30px;
+}
+
+/* Adicione ou ajuste estas regras no seu arquivo CSS para estilizar o contador */
+.cart-counter {
+  background-color: #c3c5a6;
+  color: #000000;
+  border-radius: 50%;
+  font-size: 15px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Adicione ou ajuste estas regras no seu arquivo CSS para estilizar o carrinho */
+.cart-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ajuste o z-index para garantir que o carrinho fique acima de outros elementos */
+}
+
+.cart-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Ajuste a largura máxima do carrinho conforme necessário */
+  width: 100%;
+}
+
+#cartItems {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-buttons {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Botão 'Fechar Carrinho' */
+.cart-buttons button {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-buttons button:hover {
+  background-color: #e04c51;
+}
+
+/* Botões 'Remover' dentro do carrinho */
+#cartItems li button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cartItems li button:hover {
+  background-color: #c4c4c4;
+}
+
+.liProducts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

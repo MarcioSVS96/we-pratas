@@ -22,7 +22,7 @@ function exibirCatalogo() {
                 btnCard.textContent = "Comprar";
                 btnCard.id = `meuBotao${index}`; // Cada botão recebe um ID único
                 btnCard.addEventListener("click", function() {
-                    alert(`Você clicou no botão para comprar o produto: ${item.nome}`);
+                    adicionarAoCarrinho(item);
                 });
 
                 card.appendChild(img)
@@ -33,5 +33,6 @@ function exibirCatalogo() {
             })
         })
 }
+
 
 exibirCatalogo()

@@ -2,6 +2,15 @@
 header {
     background-color: $light-second-color;
     padding:.8rem 4rem;
+    
+    /*
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    
+    */
 
     .nav-top{
         display: flex;
@@ -29,13 +38,13 @@ header {
         }
         .end{
             display: flex;
-            justify-content:space-between;
             width: 100px;
-            button{
+            #cart-btn{
                 background-color: transparent;
                 border: none;
                 font-size: 1.5rem;
                 color: $text-color;
+                cursor: pointer;
             }
         }
     }
@@ -55,3 +64,63 @@ header {
        
     }
 }
+
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all .45s ease;
+    height: 6rem;
+
+    img{
+        max-width: 70px;
+        max-height: 70px;
+        transition: all .45s ease;
+    }
+  }
+  
+  
+  .hide-nav {
+    display: none;
+    transition: all .55s ease;
+    
+  }
+  
+
+
+  /* ... Seus estilos CSS existentes ... */
+
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .cart-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
+    h2{
+        font-size: 30px;
+    }
+  }
+  
+  #cartItems {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-buttons {
+    margin-top: 10px;
+  }
+  
