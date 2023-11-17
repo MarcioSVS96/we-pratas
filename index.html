@@ -31,11 +31,13 @@
                     <ion-icon name="cart-outline" class="icon" id="cart"></ion-icon>
                 </button>
                 <span id="cartCounter" class="cart-counter"></span>
-                <div class="cart-overlay" id="cartOverlay">
+                <div class="cart-overlay" id="cartOverlay">     
                     <div class="cart-content">
                         <h2>Seu carrinho</h2>
                         <ul id="cartItems"></ul>
+                        <div class="cartTotal"></div> <!-- Elemento para exibir o total -->
                         <div class="cart-buttons">
+                            <button id="enviarPedido">Enviar Pedido via WhatsApp</button>
                             <button onclick="fecharCarrinho()">Fechar Carrinho</button>
                         </div>
                     </div>

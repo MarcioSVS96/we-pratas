@@ -23,6 +23,8 @@
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Ajuste o z-index para garantir que o carrinho fique acima de outros elementos */
+
+   
 }
 
 .cart-content {
@@ -32,16 +34,26 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px; /* Ajuste a largura máxima do carrinho conforme necessário */
     width: 100%;
+
+    h2{
+        font-size: 30px;
+    }
 }
 
 #cartItems {
     list-style: none;
     padding: 0;
+
 }
 
 .cart-buttons {
     margin-top: 10px;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+
+    #enviarPedido{
+        background-color: green;
+    }
 }
 
 /* Botão 'Fechar Carrinho' */
@@ -76,6 +88,10 @@
 .liProducts{
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
+}
+.cartTotal{
+    font-size: 20px;
+    font-weight: 700;
 }

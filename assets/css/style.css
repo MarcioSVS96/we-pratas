@@ -107,6 +107,9 @@ header .nav-bot .item a {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
+  max-height: 400px;
+  height: auto;
+  overflow-y: auto;
 }
 .cart-content h2 {
   font-size: 30px;
@@ -476,6 +479,9 @@ footer .direitos p {
   max-width: 400px; /* Ajuste a largura máxima do carrinho conforme necessário */
   width: 100%;
 }
+.cart-content h2 {
+  font-size: 30px;
+}
 
 #cartItems {
   list-style: none;
@@ -484,7 +490,11 @@ footer .direitos p {
 
 .cart-buttons {
   margin-top: 10px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-buttons #enviarPedido {
+  background-color: green;
 }
 
 /* Botão 'Fechar Carrinho' */
@@ -520,8 +530,13 @@ footer .direitos p {
 .liProducts {
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
+}
+
+.cartTotal {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
