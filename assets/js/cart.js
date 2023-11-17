@@ -42,20 +42,26 @@ function exibirCarrinho() {
         const listItem = document.createElement('li');
         listItem.textContent = `${item.nome} - ${item.preco}`;
         listItem.classList.add('liProducts');
-
+    
         const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remover';
+    
+        const ionIcon = document.createElement('ion-icon');
+        ionIcon.setAttribute('name', 'trash-outline'); // Define o nome do ícone como 'trash-outline'
+        removeButton.appendChild(ionIcon); // Adiciona o ícone como filho do botão
+    
         removeButton.addEventListener('click', () => {
             removerDoCarrinho(index);
         });
-
+    
         listItem.appendChild(removeButton);
         cartItemsElement.appendChild(listItem);
-
+    
         // Convertendo o preço para um número para somar ao total
         const price = parseFloat(item.preco.replace('R$', '').replace(',', '.'));
         totalPrice += price;
     });
+    
+    
 
     // Exibe o total no carrinho
     cartTotal.textContent = `Total: R$ ${totalPrice.toFixed(2)}`;

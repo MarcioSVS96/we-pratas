@@ -15,6 +15,7 @@
     <script src="assets/js/cart.js" defer></script>
     <script src="assets/js/scroll-header.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="assets/js/catalogo.js" defer></script>
     <title>We Pratas</title>
 </head>
 <body>
@@ -33,12 +34,16 @@
                 <span id="cartCounter" class="cart-counter"></span>
                 <div class="cart-overlay" id="cartOverlay">     
                     <div class="cart-content">
-                        <h2>Seu carrinho</h2>
+                        <div id="header-cart">
+                            <h2>Seu carrinho</h2>
+                            <button id="esc" onclick="fecharCarrinho()">X</button>
+                        </div>
+                        
                         <ul id="cartItems"></ul>
                         <div class="cartTotal"></div> <!-- Elemento para exibir o total -->
                         <div class="cart-buttons">
                             <button id="enviarPedido">Enviar Pedido via WhatsApp</button>
-                            <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -47,13 +52,13 @@
         </div>
         <div class="nav-bot">
             <nav class="item">
-                <a href="#">ANEL</a>
-                <a href="#">BRINCO</a>
-                <a href="#">COLAR</a>
-                <a href="#">PIERCING</a>
-                <a href="#">PINGENTE</a>
-                <a href="#">PULSEIRA</a>
-                <a href="#">TORNOZELEIRA</a>
+                <a href="#" class="anel categoria">ANEL</a>
+                <a href="#" class="brinco categoria">BRINCO</a>
+                <a href="#" class="colar categoria">COLAR</a>
+                <a href="#" class="piercing categoria">PIERCING</a>
+                <a href="#" class="pingente categoria">PINGENTE</a>
+                <a href="#" class="pulseira categoria">PULSEIRA</a>
+                <a href="#" class="tornozeleira categoria">TORNOZELEIRA</a>
             </nav>
         </div>
     </header>
@@ -80,17 +85,17 @@
         <section id="categories">
             
             <div class="categories-silver">
-                <div class="categorie">
-                    <a href="#"><img src="assets/img/categoria1.jpg" alt="aneis"><span class="category-name">Aneis</span></a>
+                <div class="categorie" data-category="aneis">
+                    <a href="#" class="anel"><img src="assets/img/categoria1.jpg" alt="aneis"><span class="category-name">Aneis</span></a>
                 </div>
-                <div class="categorie">
-                    <a href="#"><img src="assets/img/categoria2.jpg" alt="brincos"><span class="category-name">Brincos</span></a>
+                <div class="categorie" data-category="brinco">
+                    <a href="#" class="brinco"><img src="assets/img/categoria2.jpg" alt="brincos"><span class="category-name">Brincos</span></a>
                 </div>
-                <div class="categorie">
-                    <a href="#"><img src="assets/img/categoria3.jpg" alt="colares"><span class="category-name">Colares</span></a>
+                <div class="categorie" data-category="colar">
+                    <a href="#" class="colar"><img src="assets/img/categoria3.jpg" alt="colares"><span class="category-name">Colares</span></a>
                 </div>
-                <div class="categorie">
-                    <a href="#"><img src="assets/img/categoria4.jpg" alt="pulseiras"><span class="category-name">Pulseiras</span></a>
+                <div class="categorie" data-category="pulseira">
+                    <a href="#" class="pulseira"><img src="assets/img/categoria4.jpg" alt="pulseiras"><span class="category-name">Pulseiras</span></a>
                 </div>
             </div>
         </section>   
