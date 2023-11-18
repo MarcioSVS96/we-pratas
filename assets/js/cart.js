@@ -1,10 +1,16 @@
 // Função para adicionar item ao carrinho
 function adicionarAoCarrinho(produto) {
     const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // Adiciona o produto diretamente ao carrinho
+    produto.quantidade = 1;
     carrinhoItens.push(produto);
+
     localStorage.setItem('carrinho', JSON.stringify(carrinhoItens));
     exibirCarrinho();
 }
+
+
 
 // Função para remover item do carrinho
 function removerDoCarrinho(index) {
@@ -19,14 +25,31 @@ function criarTextoPedido() {
     const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
     let texto = 'Pedido We Pratas:\n\n';
 
-    carrinhoItens.forEach((item, index) => {
-        texto += `${index + 1}. ${item.nome} - ${item.preco}\n`;
+    let cartItemsMap = new Map(); // Mapa para agrupar itens do carrinho
+
+    carrinhoItens.forEach((item) => {
+        if (!cartItemsMap.has(item.nome)) {
+            // Se o item ainda não estiver no mapa, adiciona com a quantidade atual
+            cartItemsMap.set(item.nome, { ...item, quantidade: 1 });
+        } else {
+            // Se o item já estiver no mapa, incrementa a quantidade
+            let existingItem = cartItemsMap.get(item.nome);
+            existingItem.quantidade++;
+            cartItemsMap.set(item.nome, existingItem);
+        }
+    });
+
+    // Converter o mapa de volta para um array
+    const cartItemsArray = Array.from(cartItemsMap.values());
+
+    cartItemsArray.forEach((item, index) => {
+        texto += `${index + 1}. ${item.nome} - ${item.preco} x ${item.quantidade}\n`;
     });
 
     return texto;
 }
 
-// Função para exibir os itens no carrinho e calcular o total
+
 function exibirCarrinho() {
     const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
     const cartItemsElement = document.getElementById('cartItems');
@@ -37,35 +60,50 @@ function exibirCarrinho() {
     cartCounter.textContent = carrinhoItens.length;
 
     let totalPrice = 0; // Variável para armazenar a soma dos preços
+    let cartItemsMap = new Map(); // Mapa para agrupar itens do carrinho
 
-    carrinhoItens.forEach((item, index) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${item.nome} - ${item.preco}`;
-        listItem.classList.add('liProducts');
-    
-        const removeButton = document.createElement('button');
-    
-        const ionIcon = document.createElement('ion-icon');
-        ionIcon.setAttribute('name', 'trash-outline'); // Define o nome do ícone como 'trash-outline'
-        removeButton.appendChild(ionIcon); // Adiciona o ícone como filho do botão
-    
-        removeButton.addEventListener('click', () => {
-            removerDoCarrinho(index);
-        });
-    
-        listItem.appendChild(removeButton);
-        cartItemsElement.appendChild(listItem);
-    
+    carrinhoItens.forEach((item) => {
+        if (!cartItemsMap.has(item.nome)) {
+            // Se o item ainda não estiver no mapa, adiciona com a quantidade atual
+            cartItemsMap.set(item.nome, { ...item, quantidade: 1 });
+        } else {
+            // Se o item já estiver no mapa, incrementa a quantidade
+            let existingItem = cartItemsMap.get(item.nome);
+            existingItem.quantidade++;
+            cartItemsMap.set(item.nome, existingItem);
+        }
+
         // Convertendo o preço para um número para somar ao total
         const price = parseFloat(item.preco.replace('R$', '').replace(',', '.'));
         totalPrice += price;
     });
-    
-    
+
+    // Converter o mapa de volta para um array
+    const cartItemsArray = Array.from(cartItemsMap.values());
+
+    cartItemsArray.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.nome} - ${item.preco} x ${item.quantidade}`;
+        listItem.classList.add('liProducts');
+
+        const removeButton = document.createElement('button');
+
+        const ionIcon = document.createElement('ion-icon');
+        ionIcon.setAttribute('name', 'trash-outline'); // Define o nome do ícone como 'trash-outline'
+        removeButton.appendChild(ionIcon); // Adiciona o ícone como filho do botão
+
+        removeButton.addEventListener('click', () => {
+            removerDoCarrinho(index);
+        });
+
+        listItem.appendChild(removeButton);
+        cartItemsElement.appendChild(listItem);
+    });
 
     // Exibe o total no carrinho
     cartTotal.textContent = `Total: R$ ${totalPrice.toFixed(2)}`;
 }
+
 
 // Função para enviar o pedido via WhatsApp
 function enviarPedidoViaWhatsApp() {
