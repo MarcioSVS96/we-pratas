@@ -41,6 +41,23 @@ function exibirCatalogo(categoria = "") {
     });
 }
 
+// Função para adicionar evento de clique nos itens de categoria
+function adicionarEventoCategoria() {
+    const categoriasItens = document.querySelectorAll('.categories-silver .categorie a');
+
+    categoriasItens.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const categoriaSelecionada = item.classList[0]; // Obtém a classe do item clicado
+            exibirCatalogo(categoriaSelecionada);
+        });
+    });
+}
+
+// No final do código, chame a função para adicionar os eventos de clique aos itens de categoria
+adicionarEventoCategoria();
+
+
 function escolherAleatorios(array, quantidade) {
     const copiaArray = [...array];
     const resultados = [];
