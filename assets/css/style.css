@@ -82,7 +82,6 @@ header .nav-bot .item a {
   transition: all 0.55s ease;
 }
 
-/* ... Seus estilos CSS existentes ... */
 .cart-overlay {
   display: none;
   position: fixed;
@@ -555,6 +554,41 @@ footer .direitos p {
   text-align: center;
 }
 
+#contact-body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#contact-body header {
+  height: 15%;
+}
+#contact-body header .nav-top .center img {
+  max-width: 70px;
+  max-height: 70px;
+}
+#contact-body header .nav-bot {
+  display: none;
+}
+#contact-body main {
+  height: 68%;
+  align-items: center;
+  display: flex;
+}
+#contact-body footer {
+  height: 17%;
+}
+#contact-body footer .redes-sociais {
+  display: none;
+}
+#contact-body footer .direitos img {
+  max-width: 70px;
+  max-height: 70px;
+}
+#contact-body footer .topo {
+  display: none;
+}
+
 #contact {
   background: #f4f4f4;
   display: flex;
@@ -562,6 +596,7 @@ footer .direitos p {
   justify-content: center;
   padding: 2rem 0;
   width: 100%;
+  height: 80%;
 }
 
 .contact-form {
@@ -606,11 +641,6 @@ footer .direitos p {
 .contact-form .submit:hover {
   transform: scale(1.1);
   cursor: pointer;
-}
-
-.contact-header {
-  height: 15%;
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
