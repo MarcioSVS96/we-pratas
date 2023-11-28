@@ -28,3 +28,17 @@ const bannerContainer = document.querySelector(".banner-container");
   document.getElementById("nextBtn").addEventListener("click", nextSlide);
 
   autoPlay();
+
+
+
+
+
+
+  function secretMenu( btn, a ){
+    btn.setAttribute( "onclick", `secretMenu( this, ${ a ? 0 : 1 } )` );
+    document.querySelector(".secretMenu").classList.add( a ? "show" : "hide" );
+    document.querySelector(".secretMenu").classList.remove( a ? "hide" : "show" );
+  }
+  !function(){
+    secretMenu( document.querySelector(".btn.section"), 0);
+  }()

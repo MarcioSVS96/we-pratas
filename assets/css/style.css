@@ -21,10 +21,13 @@ header .nav-top {
   align-items: center;
   justify-content: space-between;
 }
+header .nav-top .secretMenu {
+  display: none;
+}
 header .nav-top .start {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 30%;
 }
 header .nav-top .start a {
   color: #ffffff;
@@ -39,7 +42,8 @@ header .nav-top .center a img {
 }
 header .nav-top .end {
   display: flex;
-  width: 100px;
+  justify-content: flex-end;
+  width: 30%;
 }
 header .nav-top .end #cart-btn {
   background-color: transparent;
@@ -69,7 +73,7 @@ header .nav-bot .item a {
   width: 100%;
   z-index: 1000;
   transition: all 0.45s ease;
-  height: 6rem;
+  height: 7rem;
 }
 .fixed-header img {
   max-width: 70px;
@@ -175,7 +179,7 @@ header .nav-bot .item a {
 .categorie {
   border: 1px solid #e0e0e0;
   height: 380px;
-  width: calc(24% - 10px); /* Considerando uma margem de 10px à direita e 10px à esquerda */
+  width: 20%; /* Considerando uma margem de 10px à direita e 10px à esquerda */
   cursor: pointer;
   margin: 10px; /* Espaçamento entre as categorias */
   text-align: center;
@@ -282,6 +286,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .catalogo {
@@ -302,6 +307,9 @@ body {
   width: 260px;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .card img {
@@ -341,47 +349,6 @@ body {
   width: 300px; /* Largura do título */
   text-align: center; /* Centraliza o título */
   margin-bottom: 1rem;
-  margin-top: 2rem;
-}
-
-.about {
-  display: flex;
-  padding: 6rem;
-}
-.about .left {
-  width: 50%;
-  height: auto;
-  position: relative;
-}
-.about .left .background-img {
-  width: 450px;
-  height: auto;
-}
-.about .left .logo-img {
-  position: absolute;
-  top: 80px;
-  left: 300px;
-  width: 300px;
-  height: auto;
-}
-.about .right {
-  margin-left: 9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #c9bdaf;
-  height: 300px;
-  margin-top: 5rem;
-  text-align: center;
-}
-.about .right h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-.about .right p {
-  line-height: 1.3;
-  padding: 30px;
 }
 
 footer {
@@ -594,9 +561,10 @@ footer .direitos p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem;
   width: 100%;
   height: 80%;
+  gap: 2rem;
 }
 
 .contact-form {
@@ -628,19 +596,287 @@ footer .direitos p {
 
 .contact-form .submit {
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   background: #ff4d05;
   color: #fff;
   border-radius: 8px;
   border: none;
-  padding: 1rem 3rem;
   transition: all 0.45s ease;
-  width: 40%;
+  width: 150px;
+  height: 40px;
 }
 
 .contact-form .submit:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.contact-text h4 {
+  color: black;
+  margin: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-text h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.contact-text p {
+  color: black;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  width: 90%;
+}
+
+.contact-text h2, h4, p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list {
+  gap: 1rem;
+}
+
+.list li {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 1rem;
+}
+
+.list ion-icon {
+  font-size: 28px;
+}
+
+.list li a {
+  display: block;
+  color: black;
+  font-size: 18px;
+  transition: all 0.45s ease;
+}
+
+.list li a:hover {
+  color: black;
+  transform: translateX(5px);
+}
+
+.sucess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sucess .card-sucess {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.sucess .card-sucess p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.sucess .card-sucess a {
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  background-color: #ff4d05;
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para telas pequenas (por exemplo, smartphones) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0.8rem 2rem; /* Redimensione o preenchimento do cabeçalho */
+  }
+  header .nav-top .start {
+    display: none !important;
+  }
+  header .nav-top .secretMenu {
+    display: block !important;
+  }
+  header .nav-bot {
+    display: none;
+  }
+  /*.atn.section{
+      margin-top: 3.6rem;
+
+  }*/
+  .secretMenu.show .atn.section {
+    margin-top: 3rem;
+    width: 100% !important;
+  }
+  .fixed-header .secretMenu.show .atn.section {
+    margin-top: 0;
+  }
+  main .info .info-web {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    padding: 1rem;
+  }
+  .direitos {
+    width: 40%;
+  }
+  .direitos img {
+    scale: 0.8;
+  }
+  .direitos p {
+    text-align: center;
+  }
+  .redes-sociais {
+    scale: 0.7;
+    justify-content: flex-start;
+    display: flex;
+    gap: 10px;
+    width: 20%;
+  }
+  .end {
+    justify-content: flex-end;
+  }
+  .nav-top {
+    align-items: center; /* Centralize os itens */
+    gap: 1rem; /* Adicione espaçamento entre os itens */
+  }
+  .center {
+    margin-bottom: 1rem; /* Adicione margem inferior para o logotipo */
+  }
+  .catalogo .card {
+    width: 47%; /* Redimensione os cards para ocupar mais largura */
+  }
+  /* Ajustes para outros itens dentro de main */
+  .container {
+    height: 500px;
+  }
+  .container #banner, .container .banner-container, .container .banner-item, .container img {
+    height: 100%;
+    object-fit: cover;
+  }
+  #categories {
+    display: none;
+  }
+  .categories-silver .categorie {
+    width: 100%; /* Faça as categorias ocuparem toda a largura */
+    margin: 10px 0; /* Ajuste a margem entre as categorias */
+  }
+  .info {
+    flex-direction: column; /* Altere a direção do flex para coluna */
+    padding: 0 1rem; /* Reduza o preenchimento para a seção de informações */
+    margin: 2rem 0; /* Adicione margem superior e inferior para a seção de informações */
+  }
+  .info .info-web {
+    width: 100%; /* Faça os elementos ocuparem toda a largura */
+    margin-bottom: 1rem; /* Adicione margem inferior para os itens de informações */
+  }
+  .icon-whatsapp {
+    /* Ajustes para o ícone do WhatsApp */
+    bottom: 20px; /* Altere a posição do ícone do WhatsApp */
+    right: 20px;
+  }
+}
+/* Estilos para tablets */
+@media screen and (max-width: 1024px) {
+  /* Aqui você pode adicionar estilos específicos para tablets, se necessário */
+}
+/* Ajustes para telas menores (por exemplo, smartphones) */
+@media screen and (max-width: 768px) {
+  .nav-bot .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .nav-bot .item.hide-nav {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
+.secretMenu {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 6rem;
+  z-index: 9999;
+}
+
+.secretMenu > .section.btn {
+  transition-duration: 0.15s;
+  margin-top: 1rem;
+}
+
+.secretMenu.hide > .section.btn {
+  font-size: 50px;
+  color: white;
+}
+
+.secretMenu.show > .section.btn {
+  font-size: 50px;
+  color: white;
+}
+
+.showBTN-with-margin {
+  margin-top: 0 !important; /* Defina a margem superior desejada */
+}
+
+.secretMenu .atn.section {
+  width: 100%;
+  transition: 0.3s;
+  background: #272727;
+  overflow: hidden;
+}
+
+.secretMenu.hide .atn.section {
+  width: 0;
+}
+
+.secretMenu.show .atn.section {
+  position: absolute;
+  left: 0;
+  top: 7rem;
+  width: 300px;
+}
+
+.secretMenu .atn.section div.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.secretMenu .atn.section div.grid div[class*=item-] {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5019607843);
+}
+
+.secretMenu .atn.section div.grid div[class*=item-]:hover {
+  background-color: #383838;
+}
+
+.ionicon {
+  font-size: 50px;
+  color: white;
+}
+
+.grid div a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

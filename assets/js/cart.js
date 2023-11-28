@@ -143,3 +143,5 @@ document.getElementById('cart-btn').addEventListener('click', () => {
 
 // Chame exibirCarrinho() para exibir os itens no carrinho quando a página carregar
 exibirCarrinho();
+
+

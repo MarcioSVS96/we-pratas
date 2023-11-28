@@ -8,3 +8,5 @@ document.getElementById('topoPagina').addEventListener('click', function(event) 
       behavior: 'smooth'
     });
   });
+
+  
